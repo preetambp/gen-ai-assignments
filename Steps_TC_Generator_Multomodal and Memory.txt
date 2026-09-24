@@ -1,0 +1,59 @@
+Node 1:(Chat Trigger)
+
+Click on +(Add a trigger) button to create the flow 
+
+Click on chat on search box then select chat--->On new Chat event
+
+Click on testchat or close the chat window (you will see chat trigger is created on flow page)
+
+
+Node 2:(AI Agent)
+
+Click on +(Add a trigger) button
+
+Click on chat on search box then select AI Agent
+
+Double click on AI Agent and Select source for prompt as the option Connected Chat Trigger Node
+
+select system message and paste the prompt given in the "Test Case Generator -ICEPOT-Prompt" file
+
+
+Node 3:
+
+Under AI Agent you can find '+' symbol to add the model component .Click on + and add Groq Chat Model 
+
+Parameters -->Credentials to connect with --Click the create new credential-->Add the Api key and click save .
+
+Choose the model like llama-3.3-70b-versatile ., etc 
+
+
+Node 4:(Fallback model)
+
+Double click on AI Agent and Toggle on Enable Fallback Model now you will find fallback option under AI Agent 
+
+
+Click on + and add Groq Chat Model 
+
+Parameters -->Credentials to connect with --Click the create new credential-->Add the Api key and click save .
+
+Choose the model like llama-3.3-70b-versatile ., etc 
+
+
+Double click on Chat Trigger component and under options click Add field option and select Allow file uploads then enable the Allow File Uploads then you will find attachment option in chat window
+
+
+Node 5:
+Under AI Agent you can find '+' symbol to add the memory .Click on + and add Simple Memory
+
+Open Chat and give the userstory in chat window
+
+Start generating the testcases with memory and fallback models
+
+
+
+
+
+
+
+
+

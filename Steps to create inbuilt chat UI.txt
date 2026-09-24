@@ -1,0 +1,23 @@
+Double click the Chat Trigger component 
+
+Enable the Make Chat Publicly Available
+
+Publish the flow 
+
+Copy the URL and open in browser 
+
+you will see chat window opened in browser 
+
+Give the userstory in chat and generate the testcases
+
+Change the Initial Message(s)
+
+Under options Click Add Field option and Choose Custom Chat Styling
+
+Copy the values and make the changes as your wish with the help of any cha agents like chatgpt.Claude,copilot.
+
+Paste the values in Custom Chat Styling and publish the flow 
+
+Copy the URL and open in browser 
+
+you will see chat window opened in browser with new Custom Chat Styling

@@ -1,0 +1,141 @@
+Steps to Create GitHub code reviewer agent :
+
+
+
+
+Original URL : https://github.com/testleaftrainings/Sel_May_2026/blob/main/Week5/Day2/LearnDragAndDrop.java
+
+Changed URL : https://raw.githubusercontent.com/testleaftrainings/Sel_May_2026/main/Week5/Day2/LearnDragAndDrop.java
+
+
+
+Component 1:
+
+Add the initial trigger component On Form Submission
+
+Double click and open the component
+
+Fill or choose the below options
+Authentication --None
+Form Title --AI GitHub Code Reviewer
+
+Form Description---Enter a GitHub Repository or File URL. The AI will review the source code and generate a detailed code review report.
+
+
+Click Add Form Element
+
+Label-GitHub File URL
+Element Type- Text Input
+Select the placeholder and update the GitHub URL
+
+
+On Respond When---"Choose Form is submitted"
+
+Component 2:
+
+Add HTTP Request 
+
+Double click and open the component
+
+Method should be Get
+
+Under URL option paste the Changed GitHub URL 
+
+Authentication should be none
+
+
+Component 3:
+
+Add Basic LLM Chain 
+
+Double click and open the component
+
+Source for Prompt (User Message) as Define Below from dropdown
+
+On Prompt (User Message)--Mouse hover and select expression
+
+Add the prompt (Prompt Template file) in the placeholder provided on prompt(user message)
+
+
+Component 4:Groq Model
+
+
+Under Basic LLM Chain you can find '+' symbol to add the model component .Click on + and add Groq Chat Model 
+
+Double click and open the component
+
+Parameters -->Credentials to connect with --Click the create new credential-->Add the Api key and click save .
+
+Choose the model like llama-3.3-70b-versatile ., etc
+
+
+Component 5:Send an Email 
+
+
+Before setup the component you need to have a setup your gmail account with password:
+
+Password is key created from google account to connect (not a normal password which is used by users)
+
+
+
+Steps to create the password for gmail setup
+
+https://myaccount.google.com/security
+
+enable 2-Step Verification If it's not already enabled.
+
+After enabling 2-Step Verification, search for App passwords or open the below link
+
+https://myaccount.google.com/apppasswords
+
+Enter App Name as "n8n" and app password will be created .Make a note of it 
+
+
+Now go back and open the flow & Double click and open the component (Send an Email)
+
+Under parameters 
+
+Credential to connect with Click new credentials 
+
+Enter user--Your mail id
+Password --Key created from google account just now
+Host--smtp.gmail.com
+
+
+Make sure Port should be 465 and SSL/TLS should be enabled 
+Click Save button
+
+
+Operation --->Send 
+
+Enter the from and to emails 
+
+Subject :Userstory Review
+
+Email format--Text
+
+Text ---{{ $json.text }}
+
+
+
+
+
+
+
+
+
+
+
+
+Component 5:Convert to File and select Convert to HTML
+
+Double click and open the component
+Operation -->Convert to HTML
+
+
+
+
+
+
+
+
