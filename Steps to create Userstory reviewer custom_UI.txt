@@ -1,0 +1,90 @@
+Steps to create Userstory reviewer agent:
+
+Node 1:
+
+Add the component "Webhook"
+
+HTTP Method ---->Post
+Path-->Userstory_reviewer
+Authentication--->None
+Respond--->Using 'Respond to Webhook' Node	
+
+Node 2: 
+
+Add the component "HTTP Request"
+
+Double click and open the component 
+
+Set the below fields:
+
+Method ----->Post
+URL---->https://your.atlassian.net/rest/api/3/search/jql   (Replace your.atlassian.net with your actual jira URL)
+Authentication--->General Credential type
+General Auth type--->Basic Auth
+Basic Auth--->click Create new credential and enter the username as email id and password is Jira API Key then click save
+
+Enable the send body 
+Body content type-->JSON
+Specific Body--->Using JSON
+
+Under JSON Value ,paste the below request body and replace your story key in jql value
+
+{
+  "jql": "key = \"{{ $node['Webhook'].json.body.storyKey }}\"",
+  "fields": [
+    "key",
+    "summary",
+    "description",
+    "status",
+    "reporter"
+  ]
+}
+
+
+
+
+
+Node 3:
+
+Add Basic LLM Chain 
+
+Double click and open the component
+
+Source for Prompt (User Message) as Define Below from dropdown
+
+Add the prompt (Prompt Template file) in the placeholder provided on prompt(user message)
+
+
+Node 4:Groq Model
+
+
+Under Basic LLM Chain you can find '+' symbol to add the model component .Click on + and add Groq Chat Model 
+
+Double click and open the component
+
+Parameters -->Credentials to connect with --Click the create new credential-->Add the Api key and click save .
+
+Choose the model like openai/gpt-oss-120b ., etc
+
+
+Node 5: Respond to Webhook
+
+
+Respond With--->Json
+
+Response body---->
+
+{{ {
+  "review": $json.text
+} }}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+Import the `Userstory_Reviewer1.json` workflow into n8n.
+
+Update the following details:
+
+* Jira credentials and configuration in the **HTTP Request** node
+
+*Add the prompt in basic llm given in the file :"prompt-template-review-user-story_custom UI"
+
+* Groq API key in the basic llm AI model node
+
+After completing the n8n setup, proceed with the UI implementation.
+
+### UI Implementation Instructions
+
+1. Create an empty folder named `Custom UI_Implementation_n8n`.
+2. Open the folder in your preferred AI coding tool.
+3. Use the provided UI implementation prompt to begin development.
+4. Implement the application phase by phase.
+
+### Strict Phase Rules
+
+* Complete only one phase at a time.
+* After completing Phase 1, stop and wait for my approval.
+* Start Phase 2 only after I explicitly approve Phase 1.
+* Follow the same approval process through Phase 4.
+* **Do not start the next phase without my approval.**
+* **Do not assume or generate unsupported requirements.**
+
+### Testing the UI
+
+After completing Phase 1:
+
+1. Locate the `index.html` file.
+2. Right-click it and select **Copy Path**.
+3. Paste the copied path into any web browser.
+4. Open it and verify that the UI is displayed correctly.
+
+Repeat the implementation, review, and approval process until Phase 4 is completed.
+
+### Phase 5: n8n Integration
+
+Before starting Phase 5:
+
+1. Open the **Webhook** node in the n8n workflow.
+2. Copy the **Production URL**, for example:
+
+```text
+http://localhost:5678/webhook/userstory1_reviewer
+```
+
+3. Provide the Production Webhook URL to the AI coding tool.
+4. In Phase 5, connect the custom UI with the n8n workflow using the webhook URL.
+5. Test the complete end-to-end flow and confirm that the UI sends data to n8n and correctly displays the response.
