@@ -1,0 +1,23 @@
+📌 Home Assignments – n8n
+
+Assignment 1 – Explore n8n Case Studies
+Go through the n8n case studies and understand how real enterprise organizations are using n8n.
+Focus on:
+
+- What problem/use case they had
+- Where and why they implemented n8n
+- How the workflow was implemented
+- How n8n helped them in real-world scenarios
+- 
+https://n8n.io/case-studies/
+
+
+Assignment 2 – Explore & Build an n8n Template
+Open the Templates section in n8n and explore the available workflow templates (11,000+).
+
+- Explore different workflows and understand what they are doing.
+- Choose any one template/use case of your interest.
+- Understand the complete workflow, nodes, integrations, and flow.
+- Try to build/recreate the workflow yourself in n8n.
+
+The objective is not just to copy the template, but to understand why each node is used and how the complete workflow solves a real-world problem.
